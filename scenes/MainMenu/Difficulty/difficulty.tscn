@@ -1,0 +1,183 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/LevelsCreator/background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Misc/Font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/MainMenu/Difficulty/difficulty.gd" type="Script" id=3]
+[ext_resource path="res://assets/demo/yoster-island.regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 4 )
+
+[node name="dificulty" type="Control"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" parent="." instance=ExtResource( 1 )]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 192.0
+margin_top = 80.0
+margin_right = 1120.0
+margin_bottom = 691.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 28
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Easy" type="Button" parent="VBoxContainer"]
+margin_right = 928.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+hint_tooltip = "Look at me I'm bebe"
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer/Easy"]
+margin_left = 384.0
+margin_right = 505.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 2 )
+text = "Easy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Normal" type="Button" parent="VBoxContainer"]
+margin_top = 78.0
+margin_right = 928.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 50 )
+hint_tooltip = "yo wassup mom may i play some video games after I'm done with homework."
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer/Normal"]
+margin_left = 368.0
+margin_top = 1.0
+margin_right = 540.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 2 )
+text = "Normal"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hard" type="Button" parent="VBoxContainer"]
+margin_top = 156.0
+margin_right = 928.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 50 )
+hint_tooltip = "Doom Eternal Full Mele Playthrough"
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer/Hard"]
+margin_left = 384.0
+margin_top = 2.0
+margin_right = 508.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 2 )
+text = "Hard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gradual" type="Button" parent="VBoxContainer"]
+margin_top = 234.0
+margin_right = 928.0
+margin_bottom = 284.0
+rect_min_size = Vector2( 0, 50 )
+hint_tooltip = "when you've finished all levels in selected difficulty, you will be able to play more demanding levels"
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer/gradual"]
+margin_top = 3.0
+margin_right = 909.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 1264, -272 )
+custom_fonts/font = ExtResource( 2 )
+text = "Difficulty Gradualy Rising "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RandomPool" type="CheckButton" parent="VBoxContainer"]
+margin_top = 312.0
+margin_right = 928.0
+margin_bottom = 352.0
+hint_tooltip = "first step - random levels from 1 to 20 in choosen difficulty"
+mouse_default_cursor_shape = 2
+shortcut_in_tooltip = false
+flat = true
+align = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/RandomPool"]
+margin_top = 4.0
+margin_right = 816.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 1264, -272 )
+custom_fonts/font = SubResource( 1 )
+text = "Random Levels From selected difficulty level pool"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapMaker" type="Button" parent="VBoxContainer"]
+margin_top = 380.0
+margin_right = 928.0
+margin_bottom = 434.0
+hint_tooltip = "You can explore on your own risk ;-;"
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 2 )
+text = "Make Your Own Map!"
+flat = true
+
+[node name="MapPlayer" type="Button" parent="VBoxContainer"]
+visible = false
+margin_top = 462.0
+margin_right = 928.0
+margin_bottom = 516.0
+custom_fonts/font = ExtResource( 2 )
+text = "Play Your Own Map!"
+flat = true
+
+[node name="Menu" type="Button" parent="."]
+margin_left = 896.0
+margin_top = 640.0
+margin_right = 1254.0
+margin_bottom = 694.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = ExtResource( 2 )
+text = "Back to Menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Debug" type="Label" parent="."]
+visible = false
+margin_left = 192.0
+margin_top = 609.0
+margin_right = 1120.0
+margin_bottom = 657.0
+custom_fonts/font = ExtResource( 2 )
+text = "Test"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="VBoxContainer/Easy" to="." method="_on_Easy_pressed"]
+[connection signal="pressed" from="VBoxContainer/Normal" to="." method="_on_Normal_pressed"]
+[connection signal="pressed" from="VBoxContainer/Hard" to="." method="_on_Hard_pressed"]
+[connection signal="pressed" from="VBoxContainer/gradual" to="." method="_on_gradual_pressed"]
+[connection signal="pressed" from="VBoxContainer/RandomPool" to="." method="_on_RandomPool_pressed"]
+[connection signal="pressed" from="VBoxContainer/MapMaker" to="." method="_on_MapMaker_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]

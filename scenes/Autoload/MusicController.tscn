@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Autoload/MusicController.gd" type="Script" id=1]
+
+[node name="MusicController" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+volume_db = -26.255
+
+[node name="GameOver" type="AudioStreamPlayer" parent="."]
+volume_db = -12.119
+
+[node name="Step" type="AudioStreamPlayer" parent="."]
+volume_db = -10.097
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+volume_db = -12.117
+[connection signal="finished" from="GameOver" to="." method="_on_GameOver_finished"]
+[connection signal="finished" from="Win" to="." method="_on_Win_finished"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/structure/minecartfullbackground.png" type="Texture" id=1]
+[ext_resource path="res://scenes/LevelsCreator/Spot.gd" type="Script" id=2]
+[ext_resource path="res://assets/structure/minecartbackground.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.91134, 5.95403 )
+
+[node name="Spot" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="empty" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="full" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 8, 8 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Spot_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Spot_body_exited"]
+[connection signal="texture_changed" from="empty" to="." method="_on_Sprite_texture_changed"]

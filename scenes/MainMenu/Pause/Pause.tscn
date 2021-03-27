@@ -1,0 +1,200 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/MenuItems/Black.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/Misc/Font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/MainMenu/Pause/Pause.gd" type="Script" id=3]
+
+[node name="Node2D" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 3 )
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.709804 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.0
+margin_top = -64.0
+margin_right = 124.0
+margin_bottom = -10.0
+custom_fonts/font = ExtResource( 2 )
+text = "Continue"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Save" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -152.0
+margin_top = 32.0
+margin_right = -16.0
+margin_bottom = 86.0
+custom_fonts/font = ExtResource( 2 )
+text = "Save"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="username" type="LineEdit" parent="Save"]
+visible = false
+margin_left = -384.0
+margin_top = -312.0
+margin_right = 160.0
+margin_bottom = -200.0
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Save"]
+visible = false
+margin_left = -24.0
+margin_top = -384.0
+margin_right = 378.0
+margin_bottom = -336.0
+custom_fonts/font = ExtResource( 2 )
+text = "Enter Username"
+
+[node name="Button" type="Button" parent="Save"]
+visible = false
+margin_left = 192.0
+margin_top = -272.0
+margin_right = 633.0
+margin_bottom = -218.0
+custom_fonts/font = ExtResource( 2 )
+text = "Submit Username"
+flat = true
+
+[node name="Load" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 32.0
+margin_right = 153.0
+margin_bottom = 86.0
+custom_fonts/font = ExtResource( 2 )
+text = "Load"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveScore" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 624.0
+margin_right = 509.0
+margin_bottom = 678.0
+custom_fonts/font = ExtResource( 2 )
+text = "Save your Score"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 840.0
+margin_top = 616.0
+margin_right = 1210.0
+margin_bottom = 670.0
+hint_tooltip = "Saves And Exits"
+custom_fonts/font = ExtResource( 2 )
+text = "Save and Exit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitToMenu" type="Button" parent="."]
+margin_left = 856.0
+margin_top = 536.0
+margin_right = 1191.0
+margin_bottom = 590.0
+custom_fonts/font = ExtResource( 2 )
+text = "Exit to Menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameDialog" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WhatsYourName" type="RichTextLabel" parent="NameDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -344.0
+margin_top = -264.0
+margin_right = 344.0
+margin_bottom = -100.0
+custom_fonts/normal_font = ExtResource( 2 )
+text = "You can save your score!
+What's your name?"
+
+[node name="NameInput" type="LineEdit" parent="NameDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -216.0
+margin_top = -48.0
+margin_right = 221.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubmitScoreButton" type="Button" parent="NameDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -88.0
+margin_top = 96.0
+margin_right = 96.0
+margin_bottom = 150.0
+custom_fonts/font = ExtResource( 2 )
+text = "Submit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Leave" type="Button" parent="NameDialog"]
+margin_left = 1040.0
+margin_top = 576.0
+margin_right = 1201.0
+margin_bottom = 630.0
+custom_fonts/font = ExtResource( 2 )
+text = "Leave"
+flat = true
+[connection signal="pressed" from="Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="Save/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="SaveScore" to="." method="_on_SaveScore_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="ExitToMenu" to="." method="_on_ExitToMenu_pressed"]
+[connection signal="pressed" from="NameDialog/SubmitScoreButton" to="." method="_on_SubmitScoreButton_pressed"]
+[connection signal="pressed" from="NameDialog/Leave" to="." method="_on_Leave_pressed"]

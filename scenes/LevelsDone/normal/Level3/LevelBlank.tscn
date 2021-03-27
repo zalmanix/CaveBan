@@ -1,0 +1,130 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scenes/LevelsCreator/WallTailMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/LevelsCreator/Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/LevelsCreator/Spot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/LevelsDone/normal/Level0/LevelNormalBlank.gd" type="Script" id=5]
+[ext_resource path="res://assets/demo/yoster-island.regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.498039, 0.129412, 0.129412, 1 )
+border_width_left = 8
+border_width_right = 8
+border_color = Color( 0.498039, 0.129412, 0.129412, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 6 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 1 )
+Button/styles/hover = SubResource( 1 )
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+font_data = ExtResource( 6 )
+
+[node name="Level3" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 131072, 11, 0, 0, 12, 0, 131072, 13, 0, 0, 14, 0, 131072, 15, 0, 65536, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 131072, 65539, 0, 0, 65540, 0, 131072, 65541, 0, 0, 65542, 0, 131072, 65543, 0, 262144, 65545, 0, 0, 65546, 0, 131072, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 131072, 65552, 0, 0, 65553, 0, 0, 65554, 0, 131072, 65555, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 131072, 131087, 0, 131072, 131088, 0, 262144, 131089, 0, 65536, 131090, 0, 0, 131091, 0, 196608, 196608, 0, 0, 196609, 0, 262144, 196610, 0, 131072, 196611, 0, 131072, 196612, 0, 0, 196613, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 131072, 196626, 0, 0, 196627, 0, 131072, 262144, 0, 131072, 262145, 0, 131072, 262146, 0, 0, 262160, 0, 0, 262161, 0, 131072, 262162, 0, 131072, 262163, 0, 65536, 327680, 0, 0, 327681, 0, 131072, 327682, 0, 65536, 327687, 0, 131072, 327688, 0, 196608, 327689, 0, 131072, 327690, 0, 131072, 327691, 0, 131072, 327692, 0, 131072, 327696, 0, 0, 327697, 0, 0, 327698, 0, 65536, 327699, 0, 131072, 393216, 0, 131072, 393217, 0, 0, 393218, 0, 0, 393232, 0, 0, 393233, 0, 131072, 393234, 0, 131072, 393235, 0, 0, 458752, 0, 131072, 458753, 0, 262144, 458754, 0, 131072, 458755, 0, 0, 458756, 0, 262144, 458757, 0, 131072, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 131072, 458771, 0, 131072, 524288, 0, 0, 524289, 0, 196608, 524290, 0, 131072, 524291, 0, 131072, 524292, 0, 131072, 524293, 0, 196608, 524294, 0, 131072, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 131072, 524299, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 131072, 524305, 0, 0, 524306, 0, 262144, 524307, 0, 0, 589824, 0, 0, 589825, 0, 131072, 589826, 0, 131072, 589827, 0, 0, 589828, 0, 196608, 589829, 0, 131072, 589830, 0, 131072, 589831, 0, 0, 589832, 0, 65536, 589833, 0, 262144, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 131072, 589842, 0, 131072, 589843, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 131072, 655363, 0, 0, 655364, 0, 131072, 655365, 0, 262144, 655366, 0, 131072, 655367, 0, 131072, 655368, 0, 131072, 655369, 0, 131072, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 131072, 655374, 0, 0, 655375, 0, 0, 655376, 0, 65536, 655377, 0, 0, 655378, 0, 131072, 655379, 0, 0, 720896, 0, 131072, 720897, 0, 262144, 720898, 0, 0, 720899, 0, 0, 720900, 0, 262144, 720901, 0, 0, 720902, 0, 0, 720903, 0, 131072, 720904, 0, 131072, 720905, 0, 131072, 720906, 0, 0, 720907, 0, 131072, 720908, 0, 0, 720909, 0, 262144, 720910, 0, 262144, 720911, 0, 0, 720912, 0, 196608, 720913, 0, 0, 720914, 0, 131072, 720915, 0, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
+[node name="boxes" type="Node2D" parent="."]
+
+[node name="Box" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 144, 64 )
+
+[node name="Box2" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 176, 64 )
+
+[node name="spots" type="Node2D" parent="."]
+
+[node name="Spot" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 112, 96 )
+
+[node name="Spot2" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 240, 96 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 144, 48 )
+
+[node name="ui" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+theme = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AcceptDialog" type="AcceptDialog" parent="ui"]
+margin_left = 112.0
+margin_top = 64.0
+margin_right = 220.0
+margin_bottom = 122.0
+window_title = ":D"
+dialog_text = "Level cleard!"
+
+[node name="AcceptDialog2" type="AcceptDialog" parent="ui"]
+margin_left = 35.4079
+margin_top = 58.8409
+margin_right = 288.408
+margin_bottom = 116.841
+window_title = ":D"
+dialog_text = "You ran out of moves try again :("
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="ui"]
+margin_left = 17.9843
+margin_top = 19.1748
+margin_right = 66.9843
+margin_bottom = 33.1748
+custom_fonts/font = SubResource( 4 )
+text = "Normal 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MovesLeft" type="Label" parent="ui"]
+margin_left = 18.4126
+margin_top = 150.953
+margin_right = 114.413
+margin_bottom = 164.953
+custom_fonts/font = SubResource( 4 )
+text = "Moves Left: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="ui"]
+margin_left = 218.425
+margin_top = 15.627
+margin_right = 314.425
+margin_bottom = 29.627
+custom_fonts/font = SubResource( 4 )
+text = "Score: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Doors" type="Node2D" parent="."]
+[connection signal="confirmed" from="ui/AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]
+[connection signal="confirmed" from="ui/AcceptDialog2" to="." method="_on_AcceptDialog2_confirmed"]

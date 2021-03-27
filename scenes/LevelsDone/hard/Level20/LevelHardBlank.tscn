@@ -1,0 +1,166 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scenes/LevelsCreator/WallTailMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/LevelsCreator/Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/LevelsCreator/Spot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/LevelsDone/hard/Level0/LevelHardBlank.gd" type="Script" id=5]
+[ext_resource path="res://assets/demo/yoster-island.regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.498039, 0.129412, 0.129412, 1 )
+border_width_left = 8
+border_width_right = 8
+border_color = Color( 0.498039, 0.129412, 0.129412, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 6 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 1 )
+Button/styles/hover = SubResource( 1 )
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+font_data = ExtResource( 6 )
+
+[node name="Level20" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 65536, 2, 0, 0, 3, 0, 131072, 4, 0, 0, 5, 0, 196608, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 262144, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 131072, 14, 0, 0, 15, 0, 262144, 16, 0, 262144, 17, 0, 0, 18, 0, 0, 19, 0, 0, 65536, 0, 131072, 65537, 0, 131072, 65538, 0, 0, 65539, 0, 131072, 65540, 0, 131072, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 131072, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 131072, 65551, 0, 131072, 65552, 0, 131072, 65553, 0, 131072, 65554, 0, 0, 65555, 0, 0, 131072, 0, 0, 131073, 0, 131072, 131074, 0, 131072, 131075, 0, 0, 131076, 0, 196608, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131085, 0, 262144, 131086, 0, 131072, 131087, 0, 0, 131088, 0, 0, 131089, 0, 131072, 131090, 0, 131072, 131091, 0, 0, 196608, 0, 131072, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196618, 0, 0, 196621, 0, 131072, 196622, 0, 131072, 196623, 0, 131072, 196624, 0, 0, 196625, 0, 0, 196626, 0, 0, 196627, 0, 0, 262144, 0, 0, 262145, 0, 65536, 262146, 0, 131072, 262147, 0, 131072, 262148, 0, 0, 262149, 0, 131072, 262150, 0, 0, 262151, 0, 0, 262157, 0, 0, 262158, 0, 262144, 262159, 0, 131072, 262160, 0, 262144, 262161, 0, 0, 262162, 0, 131072, 262163, 0, 0, 327680, 0, 0, 327681, 0, 262144, 327682, 0, 131072, 327683, 0, 65536, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 131072, 327697, 0, 131072, 327698, 0, 0, 327699, 0, 0, 393216, 0, 0, 393217, 0, 131072, 393218, 0, 131072, 393219, 0, 0, 393220, 0, 131072, 393221, 0, 131072, 393222, 0, 0, 393223, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 131072, 393233, 0, 65536, 393234, 0, 65536, 393235, 0, 0, 458752, 0, 0, 458753, 0, 131072, 458754, 0, 196608, 458755, 0, 65536, 458756, 0, 0, 458757, 0, 262144, 458758, 0, 131072, 458759, 0, 0, 458762, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 131072, 458768, 0, 0, 458769, 0, 131072, 458770, 0, 131072, 458771, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 131072, 524291, 0, 0, 524292, 0, 0, 524293, 0, 131072, 524294, 0, 262144, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 131072, 524304, 0, 262144, 524305, 0, 0, 524306, 0, 131072, 524307, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 131072, 589829, 0, 131072, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 262144, 589834, 0, 131072, 589835, 0, 262144, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 131072, 589841, 0, 131072, 589842, 0, 131072, 589843, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 65536, 655363, 0, 131072, 655364, 0, 131072, 655365, 0, 0, 655366, 0, 0, 655367, 0, 262144, 655368, 0, 131072, 655369, 0, 0, 655370, 0, 131072, 655371, 0, 0, 655372, 0, 0, 655373, 0, 65536, 655374, 0, 131072, 655375, 0, 131072, 655376, 0, 196608, 655377, 0, 131072, 655378, 0, 0, 655379, 0, 0, 720896, 0, 0, 720897, 0, 131072, 720898, 0, 0, 720899, 0, 0, 720900, 0, 262144, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 131072, 720906, 0, 131072, 720907, 0, 131072, 720908, 0, 131072, 720909, 0, 0, 720910, 0, 131072, 720911, 0, 131072, 720912, 0, 0, 720913, 0, 131072, 720914, 0, 131072, 720915, 0, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
+[node name="boxes" type="Node2D" parent="."]
+
+[node name="Box3" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 160, 80 )
+
+[node name="Box5" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 144, 96 )
+
+[node name="Box6" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 160, 96 )
+
+[node name="Box7" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 176, 96 )
+
+[node name="Box4" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 160, 64 )
+
+[node name="Box8" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 176, 48 )
+
+[node name="Box14" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 144, 64 )
+
+[node name="Box15" parent="boxes" instance=ExtResource( 2 )]
+position = Vector2( 128, 32 )
+
+[node name="spots" type="Node2D" parent="."]
+
+[node name="Spot11" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 144, 32 )
+
+[node name="Spot14" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 192, 32 )
+
+[node name="Spot18" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 176, 32 )
+
+[node name="Spot16" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 192, 48 )
+
+[node name="Spot17" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 176, 48 )
+
+[node name="Spot12" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 144, 48 )
+
+[node name="Spot13" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 128, 48 )
+
+[node name="Spot15" parent="spots" instance=ExtResource( 4 )]
+position = Vector2( 128, 32 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 176, 32 )
+
+[node name="ui" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+theme = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AcceptDialog" type="AcceptDialog" parent="ui"]
+margin_left = 112.0
+margin_top = 64.0
+margin_right = 220.0
+margin_bottom = 122.0
+window_title = ":D"
+dialog_text = "Level cleard!"
+
+[node name="AcceptDialog2" type="AcceptDialog" parent="ui"]
+margin_left = 35.4079
+margin_top = 58.8409
+margin_right = 288.408
+margin_bottom = 116.841
+window_title = ":D"
+dialog_text = "You ran out of moves try again :("
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="ui"]
+margin_left = 17.9843
+margin_top = 19.1748
+margin_right = 66.9843
+margin_bottom = 33.1748
+custom_fonts/font = SubResource( 4 )
+text = "Hard 20"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MovesLeft" type="Label" parent="ui"]
+margin_left = 18.4126
+margin_top = 150.953
+margin_right = 114.413
+margin_bottom = 164.953
+custom_fonts/font = SubResource( 4 )
+text = "Moves Left: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="ui"]
+margin_left = 218.425
+margin_top = 15.627
+margin_right = 314.425
+margin_bottom = 29.627
+custom_fonts/font = SubResource( 4 )
+text = "Score: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Doors" type="Node2D" parent="."]
+[connection signal="confirmed" from="ui/AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]
+[connection signal="confirmed" from="ui/AcceptDialog2" to="." method="_on_AcceptDialog2_confirmed"]
