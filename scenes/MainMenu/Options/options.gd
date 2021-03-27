@@ -42,10 +42,10 @@ func _on_ExitMenu_pressed():
 
 
 func _on_Fullscreen_toggled(button_pressed):
-	if fullPressed:
-		fullPressed = false
-	else:
+	if button_pressed:
 		fullPressed = true
+	else:
+		fullPressed = false
 
 
 
@@ -56,27 +56,31 @@ func _on_Minus_pressed():
 
 
 func _on_Button_toggled(button_pressed):
-	if borderpressed:
-		borderpressed = false
-	else:
+	if button_pressed:
 		borderpressed = true
-
+	else:
+		borderpressed = false
 
 func _on_CheckButton_toggled(button_pressed):
-	if vsync:
-		vsync = false
-	else:
+	if button_pressed:
 		vsync = true
+	else:
+		vsync = false
 
 func _on_FpsCounter_toggled(button_pressed):
-	pass # Replace with function body.
+	if button_pressed:
+		GameManager.fpsdraw = true
+	else:
+		GameManager.fpsdraw = false
 
 
 func _on_Apply_pressed():
 	save_settings()
 	OS.window_fullscreen = fullPressed
-	OS.window_borderless = borderpressed
-	OS.vsync_enabled = vsync
 	$Fullscreen.set_pressed(fullPressed)
+	OS.window_borderless = borderpressed
 	$Button.set_pressed(borderpressed)
+	OS.vsync_enabled = vsync
 	$Vsync.set_pressed(vsync)
+	$FpsCounter.set_pressed(GameManager.fpsdraw)
+

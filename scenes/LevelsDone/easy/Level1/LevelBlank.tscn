@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/LevelsCreator/WallTailMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/LevelsCreator/Box.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://scenes/LevelsCreator/Spot.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/LevelsDone/testing/Level1/Level1.gd" type="Script" id=5]
 [ext_resource path="res://assets/demo/yoster-island.regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/Misc/LevelBlank.tres" type="DynamicFont" id=7]
+[ext_resource path="res://scenes/MainMenu/Options/Fps.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.498039, 0.129412, 0.129412, 1 )
@@ -30,10 +32,6 @@ Button/styles/focus = SubResource( 1 )
 Button/styles/hover = SubResource( 1 )
 Button/styles/normal = SubResource( 1 )
 Button/styles/pressed = SubResource( 1 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 12
-font_data = ExtResource( 6 )
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 5 )
@@ -94,7 +92,7 @@ margin_left = 17.9843
 margin_top = 19.1748
 margin_right = 66.9843
 margin_bottom = 33.1748
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 text = "Easy 1"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -105,7 +103,7 @@ margin_left = 18.4126
 margin_top = 150.953
 margin_right = 114.413
 margin_bottom = 164.953
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 text = "Moves Left: 0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -116,13 +114,13 @@ margin_left = 218.425
 margin_top = 15.627
 margin_right = 314.425
 margin_bottom = 29.627
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = ExtResource( 7 )
 text = "Score: 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Doors" type="Node2D" parent="."]
+[node name="Fps" parent="." instance=ExtResource( 8 )]
 [connection signal="confirmed" from="ui/AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]
 [connection signal="draw" from="ui/AcceptDialog" to="." method="_on_AcceptDialog_draw"]
 [connection signal="confirmed" from="ui/AcceptDialog2" to="." method="_on_AcceptDialog2_confirmed"]

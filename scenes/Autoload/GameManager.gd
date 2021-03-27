@@ -5,6 +5,7 @@ var gradually = false
 var total_score 
 var firstload = false
 var canmove = true
+var fpsdraw = false
 
 var score = 0
 var currentlevel = 1

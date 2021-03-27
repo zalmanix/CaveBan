@@ -26,6 +26,11 @@ func _process(delta):
 			child.position = Vector2(Pause.save_data["Boxes"][temp][0], Pause.save_data["Boxes"][temp][1])
 			temp += 1
 		Pause.loading = false
+	
+	if GameManager.fpsdraw:
+		$Fps/Label.text = "fps: "+str(Engine.get_frames_per_second())
+	else:
+		$Fps.visible = false
 
 func check_end():
 	Pause.playerpos = $Player.position
