@@ -45,12 +45,12 @@ stretch_mode = 4
 [node name="CenterRow" type="HBoxContainer" parent="YSort/Menu"]
 margin_top = 200.0
 margin_right = 1040.0
-margin_bottom = 430.0
+margin_bottom = 509.0
 size_flags_vertical = 3
 
 [node name="Buttons" type="VBoxContainer" parent="YSort/Menu/CenterRow"]
 margin_right = 518.0
-margin_bottom = 230.0
+margin_bottom = 309.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 25
@@ -79,45 +79,41 @@ rect_min_size = Vector2( 360, 60 )
 hint_tooltip = "Too little time for AA but just enough for Fullscreen"
 mouse_default_cursor_shape = 2
 
+[node name="Looserboard" type="Button" parent="YSort/Menu/CenterRow/Buttons"]
+margin_top = 255.0
+margin_right = 518.0
+margin_bottom = 309.0
+custom_fonts/font = ExtResource( 9 )
+flat = true
+
+[node name="Label" type="Label" parent="YSort/Menu/CenterRow/Buttons/Looserboard"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 9 )
+text = "Looserboard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CenterContainer" type="CenterContainer" parent="YSort/Menu/CenterRow"]
 margin_left = 522.0
 margin_right = 1040.0
-margin_bottom = 230.0
+margin_bottom = 309.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VersionLabel" type="Label" parent="YSort/Menu"]
-margin_top = 480.0
+margin_top = 559.0
 margin_right = 1040.0
-margin_bottom = 560.0
+margin_bottom = 628.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_shadow = Color( 0.14902, 0.192157, 0.219608, 1 )
-custom_constants/shadow_offset_x = 0
-custom_constants/line_spacing = 0
-custom_constants/shadow_offset_y = 5
-custom_constants/shadow_as_outline = 0
-text = "Version 1.1
-Made in Godot 3.1
+text = "Version 2.3
+Made in Godot 3.1.1
 "
 
 [node name="FadeIn" parent="." instance=ExtResource( 4 )]
 visible = false
-
-[node name="looserboard" type="Button" parent="."]
-margin_left = 736.0
-margin_top = 320.0
-margin_right = 1081.0
-margin_bottom = 374.0
-mouse_default_cursor_shape = 2
-custom_fonts/font = ExtResource( 9 )
-custom_constants/hseparation = 0
-text = "Looserboard"
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="Exit" type="Button" parent="."]
 margin_left = 1064.0
@@ -134,5 +130,5 @@ __meta__ = {
 [connection signal="pressed" from="YSort/Menu/CenterRow/Buttons/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="YSort/Menu/CenterRow/Buttons/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="YSort/Menu/CenterRow/Buttons/Options" to="." method="_on_Options_pressed"]
-[connection signal="pressed" from="looserboard" to="." method="_on_looserboard_pressed"]
+[connection signal="pressed" from="YSort/Menu/CenterRow/Buttons/Looserboard" to="." method="_on_Looserboard_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

@@ -35,5 +35,13 @@ func play_game_over():
 	$Music.stream_paused = true
 	$GameOver.play()
 
+func cut_game_over():
+	$GameOver.playing = false
+	$Music.stream_paused = false
+
 func _on_GameOver_finished():
+	$Music.stream_paused = false
+
+func cut_win():
+	$Win.playing = false
 	$Music.stream_paused = false

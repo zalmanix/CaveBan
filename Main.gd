@@ -11,11 +11,20 @@ func _ready():
 		fullPressed = f.get_var()
 		borderpressed = f.get_var()
 		vsync = f.get_var()
-		#vsync = f.get_var()
+		GameManager.musicdb = f.get_var()
 		f.close()
 	OS.window_fullscreen = fullPressed
 	OS.window_borderless = borderpressed
 	OS.vsync_enabled = vsync
+	var children = MusicController.get_children()
+	for i in children:
+		i.volume_db = GameManager.musicdb
+	
+	var save_file = "user://saves/save.dat"
+	if File.new().file_exists(save_file):
+		$YSort/Menu/CenterRow/Buttons/Continue.disabled = false
+	else:
+		$YSort/Menu/CenterRow/Buttons/Continue.disabled = true
 	
 	if MusicController.get_node("Music").playing:
 		pass
@@ -34,5 +43,5 @@ func _on_Exit_pressed():
 func _on_Continue_pressed():
 	Pause._on_Load_pressed()
 
-func _on_looserboard_pressed():
+func _on_Looserboard_pressed():
 	get_tree().change_scene("res://addons/silent_wolf/Scores/Leaderboard.tscn")

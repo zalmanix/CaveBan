@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/LevelsCreator/WallTailMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/LevelsCreator/Box.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/LevelsCreator/Spot.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/LevelsDone/testing/Level1/Level1.gd" type="Script" id=5]
 [ext_resource path="res://assets/demo/yoster-island.regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scenes/MainMenu/Options/Fps.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.498039, 0.129412, 0.129412, 1 )
@@ -119,6 +120,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Doors" type="Node2D" parent="."]
+[node name="Fps" parent="." instance=ExtResource( 7 )]
 [connection signal="confirmed" from="ui/AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]
 [connection signal="confirmed" from="ui/AcceptDialog2" to="." method="_on_AcceptDialog2_confirmed"]

@@ -63,6 +63,7 @@ func _on_Save_pressed():
 		"maxmovesleft" : maxmovesleft,
 		"Boxes" : boxesPos,
 		"username" : username,
+		"single" : GameManager.single,
 	}
 	
 	print(playerpos) #debug
@@ -93,6 +94,7 @@ func _on_Load_pressed():
 			Gm.score =  save_data["GMscore"]
 			Gm.rando =  save_data["GMrando"]
 			Gm.maxmoves =  save_data["maxmovesleft"]
+			Gm.single = save_data["single"]
 			var current = save_data["currentscenename"]
 			username = save_data["username"] #helllooooooo
 			

@@ -72,17 +72,24 @@ func check_end():
 				game_end = true
 
 func _on_AcceptDialog_confirmed():
+	MusicController.cut_win()
 	var temp = movesleft - GameManager.maxmoves
 	GameManager.score += int(scoretoget / temp)
 	GameManager.currentlevel += 1
 	
 	if GameManager.gradually == true:
-		#if GameManager.currentlevel == 21:
-		if GameManager.currentlevel == 3:
+		if GameManager.currentlevel == 21:
+		#if GameManager.currentlevel == 3:
 			GameManager.currentlevel = 1
 			GameManager.hard = true
 			GameManager.normal = false
 			get_tree().change_scene("res://scenes/LevelsDone/hard/Level1/LevelHardBlank.tscn")
+			return
+	
+	if GameManager.single == true:
+		if GameManager.currentlevel == 21:
+		#if GameManager.currentlevel == 3:
+			get_tree().change_scene("res://scenes/MainMenu/LooserBoard/looserboard.tscn")
 			return
 	
 	if random:
@@ -101,4 +108,5 @@ func _norandom_scene():
 	get_tree().change_scene("res://scenes/LevelsDone/normal/Level" +str(currentlevel +1)+ "/LevelBlank.tscn")
 
 func _on_AcceptDialog2_confirmed():
+	MusicController.cut_game_over()
 	get_tree().reload_current_scene()

@@ -30,7 +30,7 @@ __meta__ = {
 }
 
 [node name="Easy" type="Button" parent="VBoxContainer"]
-margin_right = 928.0
+margin_right = 1015.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 0, 50 )
 hint_tooltip = "Look at me I'm bebe"
@@ -49,7 +49,7 @@ __meta__ = {
 
 [node name="Normal" type="Button" parent="VBoxContainer"]
 margin_top = 78.0
-margin_right = 928.0
+margin_right = 1015.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 0, 50 )
 hint_tooltip = "yo wassup mom may i play some video games after I'm done with homework."
@@ -69,7 +69,7 @@ __meta__ = {
 
 [node name="Hard" type="Button" parent="VBoxContainer"]
 margin_top = 156.0
-margin_right = 928.0
+margin_right = 1015.0
 margin_bottom = 206.0
 rect_min_size = Vector2( 0, 50 )
 hint_tooltip = "Doom Eternal Full Mele Playthrough"
@@ -89,7 +89,7 @@ __meta__ = {
 
 [node name="gradual" type="Button" parent="VBoxContainer"]
 margin_top = 234.0
-margin_right = 928.0
+margin_right = 1015.0
 margin_bottom = 284.0
 rect_min_size = Vector2( 0, 50 )
 hint_tooltip = "when you've finished all levels in selected difficulty, you will be able to play more demanding levels"
@@ -111,7 +111,7 @@ __meta__ = {
 
 [node name="RandomPool" type="CheckButton" parent="VBoxContainer"]
 margin_top = 312.0
-margin_right = 928.0
+margin_right = 1015.0
 margin_bottom = 352.0
 hint_tooltip = "first step - random levels from 1 to 20 in choosen difficulty"
 mouse_default_cursor_shape = 2
@@ -133,12 +133,12 @@ __meta__ = {
 
 [node name="MapMaker" type="Button" parent="VBoxContainer"]
 margin_top = 380.0
-margin_right = 928.0
+margin_right = 1015.0
 margin_bottom = 434.0
 hint_tooltip = "You can explore on your own risk ;-;"
 mouse_default_cursor_shape = 2
 custom_fonts/font = ExtResource( 2 )
-text = "Make Your Own Map!"
+text = "Make Your Own Map! - not finished yet"
 flat = true
 
 [node name="MapPlayer" type="Button" parent="VBoxContainer"]

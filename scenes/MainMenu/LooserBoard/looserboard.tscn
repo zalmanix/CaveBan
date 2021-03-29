@@ -17,15 +17,35 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Congrats" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -600.0
+margin_top = -296.0
+margin_right = 596.0
+margin_bottom = -95.0
+custom_fonts/font = ExtResource( 2 )
+text = "Congratulations on making it to the end!
+
+You can save your score here
+If you want you can make your score
+higher by playing stage 1 levels multiple times"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Back" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 312.0
-margin_top = 200.0
-margin_right = 533.0
-margin_bottom = 254.0
+margin_left = 352.0
+margin_top = 256.0
+margin_right = 573.0
+margin_bottom = 310.0
 custom_fonts/font = ExtResource( 2 )
 text = "Go Back"
 flat = true
@@ -33,182 +53,95 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="looserboard" type="Node" parent="."]
-
-[node name="1place" type="Node" parent="looserboard"]
-
-[node name="username1" type="Label" parent="looserboard/1place"]
-margin_left = 264.0
-margin_top = 88.0
-margin_right = 525.0
-margin_bottom = 136.0
+[node name="AnotherDifficulty" type="Button" parent="."]
+margin_left = 96.0
+margin_top = 616.0
+margin_right = 797.0
+margin_bottom = 670.0
 custom_fonts/font = ExtResource( 2 )
-text = "Username:"
+text = "Choose another Difficulty"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="points1" type="Label" parent="looserboard/1place"]
-margin_left = 584.0
-margin_top = 88.0
-margin_right = 1088.0
-margin_bottom = 136.0
+[node name="SaveScore" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -152.0
+margin_top = 112.0
+margin_right = 153.0
+margin_bottom = 166.0
 custom_fonts/font = ExtResource( 2 )
-text = "6969696969 points"
+text = "Save Score"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="2place" type="Node" parent="looserboard"]
-
-[node name="username2" type="Label" parent="looserboard/2place"]
-margin_left = 264.0
-margin_top = 152.0
-margin_right = 525.0
-margin_bottom = 200.0
-custom_fonts/font = ExtResource( 2 )
-text = "Username:"
+[node name="NameDialog" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="points2" type="Label" parent="looserboard/2place"]
-margin_left = 584.0
-margin_top = 152.0
-margin_right = 1088.0
-margin_bottom = 200.0
+[node name="WhatsYourName" type="RichTextLabel" parent="NameDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -344.0
+margin_top = -264.0
+margin_right = 344.0
+margin_bottom = -100.0
+custom_fonts/normal_font = ExtResource( 2 )
+text = "You can save your score!
+What's your name?"
+
+[node name="NameInput" type="LineEdit" parent="NameDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -216.0
+margin_top = -48.0
+margin_right = 221.0
+margin_bottom = 44.0
 custom_fonts/font = ExtResource( 2 )
-text = "6969696969 points"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="3place" type="Node" parent="looserboard"]
-
-[node name="username3" type="Label" parent="looserboard/3place"]
-margin_left = 264.0
-margin_top = 216.0
-margin_right = 525.0
-margin_bottom = 264.0
+[node name="SubmitScoreButton" type="Button" parent="NameDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -88.0
+margin_top = 96.0
+margin_right = 96.0
+margin_bottom = 150.0
 custom_fonts/font = ExtResource( 2 )
-text = "Username:"
+text = "Submit"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="points3" type="Label" parent="looserboard/3place"]
-margin_left = 584.0
-margin_top = 216.0
-margin_right = 1088.0
-margin_bottom = 264.0
+[node name="Leave" type="Button" parent="NameDialog"]
+margin_left = 1040.0
+margin_top = 576.0
+margin_right = 1201.0
+margin_bottom = 630.0
 custom_fonts/font = ExtResource( 2 )
-text = "6969696969 points"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="4place" type="Node" parent="looserboard"]
-
-[node name="username4" type="Label" parent="looserboard/4place"]
-margin_left = 264.0
-margin_top = 280.0
-margin_right = 525.0
-margin_bottom = 328.0
-custom_fonts/font = ExtResource( 2 )
-text = "Username:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="points4" type="Label" parent="looserboard/4place"]
-margin_left = 584.0
-margin_top = 280.0
-margin_right = 1088.0
-margin_bottom = 328.0
-custom_fonts/font = ExtResource( 2 )
-text = "6969696969 points"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="5place" type="Node" parent="looserboard"]
-
-[node name="username5" type="Label" parent="looserboard/5place"]
-margin_left = 264.0
-margin_top = 344.0
-margin_right = 525.0
-margin_bottom = 392.0
-custom_fonts/font = ExtResource( 2 )
-text = "Username:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="points5" type="Label" parent="looserboard/5place"]
-margin_left = 584.0
-margin_top = 344.0
-margin_right = 1088.0
-margin_bottom = 392.0
-custom_fonts/font = ExtResource( 2 )
-text = "6969696969 points"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="#places" type="Node" parent="."]
-
-[node name="Label" type="Label" parent="#places"]
-margin_left = 136.0
-margin_top = 88.0
-margin_right = 232.0
-margin_bottom = 136.0
-custom_fonts/font = ExtResource( 2 )
-text = "#1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="#places"]
-margin_left = 136.0
-margin_top = 152.0
-margin_right = 232.0
-margin_bottom = 200.0
-custom_fonts/font = ExtResource( 2 )
-text = "#2"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="#places"]
-margin_left = 136.0
-margin_top = 216.0
-margin_right = 232.0
-margin_bottom = 264.0
-custom_fonts/font = ExtResource( 2 )
-text = "#3"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label4" type="Label" parent="#places"]
-margin_left = 136.0
-margin_top = 280.0
-margin_right = 232.0
-margin_bottom = 328.0
-custom_fonts/font = ExtResource( 2 )
-text = "#4"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label5" type="Label" parent="#places"]
-margin_left = 136.0
-margin_top = 336.0
-margin_right = 232.0
-margin_bottom = 384.0
-custom_fonts/font = ExtResource( 2 )
-text = "#5"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Leave"
+flat = true
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="AnotherDifficulty" to="." method="_on_AnotherDifficulty_pressed"]
+[connection signal="pressed" from="SaveScore" to="." method="_on_SaveScore_pressed"]
+[connection signal="pressed" from="NameDialog/SubmitScoreButton" to="." method="_on_SubmitScoreButton_pressed"]
+[connection signal="pressed" from="NameDialog/Leave" to="." method="_on_Leave_pressed"]

@@ -6,6 +6,8 @@ var total_score
 var firstload = false
 var canmove = true
 var fpsdraw = false
+var single = false
+var musicdb = -17.0
 
 var score = 0
 var currentlevel = 1
@@ -15,6 +17,8 @@ var easy = false
 var normal = false  #zrobić dobrze ;-; bo kacper się popłacze
 var hard = false
 
+#func _process(delta):
+	#print(OS.get_static_memory_usage())
 
 func go_next_stage_random():
 	var rng = RandomNumberGenerator.new()
