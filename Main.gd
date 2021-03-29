@@ -1,5 +1,7 @@
 extends Control
 
+# Executed when scene is ready
+# Load options from options file and set then
 func _ready():
 	var settings_file = "user://settings.save"
 	var f = File.new()
@@ -26,22 +28,30 @@ func _ready():
 	else:
 		$YSort/Menu/CenterRow/Buttons/Continue.disabled = true
 	
+	# Check if music is playing now when it is do nothing
+	#If ti is not play it
 	if MusicController.get_node("Music").playing:
 		pass
 	else:
 		MusicController.play_music()
 
+# Changing scene
 func _on_NewGame_pressed():
 	get_tree().change_scene("res://scenes/MainMenu/Difficulty/difficulty.tscn")
 
+# Changing scene
 func _on_Options_pressed():
 	get_tree().change_scene("res://scenes/MainMenu/Options/options.tscn")
 
+# Exits game ;-;
 func _on_Exit_pressed():
 	get_tree().quit()
 
+# Loading Save from file IF it exist
+# it is chcecked in Global _on_Load_pressed() function
 func _on_Continue_pressed():
 	Pause._on_Load_pressed()
 
+# Changind to addon scene where player can wiew looserboard
 func _on_Looserboard_pressed():
 	get_tree().change_scene("res://addons/silent_wolf/Scores/Leaderboard.tscn")

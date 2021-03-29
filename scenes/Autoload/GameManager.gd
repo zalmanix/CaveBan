@@ -1,5 +1,13 @@
 extends Node
+# This script is an Singelton they:
+# Are always loaded, no matter which scene is currently running.
+# Can store global variables such as player information.
+# Can handle switching scenes and between-scene transitions.
+#
+# I'm using this script for Global Variables and functions
 
+
+# Variable setting for game Management
 var rando = false
 var gradually = false
 var total_score 
@@ -9,17 +17,17 @@ var fpsdraw = false
 var single = false
 var musicdb = -17.0
 
+# Variable setting for leater use in looserboard scene
 var score = 0
 var currentlevel = 1
 var player_name
 
+# Variable for game difficulty
 var easy = false
-var normal = false  #zrobić dobrze ;-; bo kacper się popłacze
+var normal = false  
 var hard = false
 
-#func _process(delta):
-	#print(OS.get_static_memory_usage())
-
+# Changing to random scene if player checked in difficulty (for easy levels)
 func go_next_stage_random():
 	var rng = RandomNumberGenerator.new()
 	var number
@@ -27,6 +35,7 @@ func go_next_stage_random():
 	number = rng.randi_range(1,20)
 	get_tree().change_scene("res://scenes/LevelsDone/easy/Level" +str(number)+ "/LevelBlank.tscn")
 
+# Changing to random scene if player checked in difficulty (for normal levels)
 func go_normal_stage_random():
 	var rng = RandomNumberGenerator.new()
 	var number
@@ -34,15 +43,14 @@ func go_normal_stage_random():
 	number = rng.randi_range(1,20)
 	get_tree().change_scene("res://scenes/LevelsDone/normal/Level" +str(number)+ "/LevelBlank.tscn")
 
-
+# Getting player name for looserboard
 func set_player_name(name):
 	player_name = name
 	total_score = score
 
-
-
+# Setting max moves for each level each time level is loaded for first time
+# I'm sorry but I don't know how to do it in any better way
 var maxmoves = 999
-
 func _ohman():
 	match get_tree().current_scene.name:
 		"Level1":

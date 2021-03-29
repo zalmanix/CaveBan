@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/LevelsCreator/background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/LevelsCreator/components/background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Misc/Font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scenes/MainMenu/Difficulty/difficulty.gd" type="Script" id=3]
 [ext_resource path="res://assets/demo/yoster-island.regular.ttf" type="DynamicFontData" id=4]

@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/MenuItems/baner_1.png" type="Texture" id=1]
 [ext_resource path="res://assets/demo/yoster-island.regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
-[ext_resource path="res://scenes/FadeIn/FadeIn.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/LevelsCreator/background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/LevelsCreator/components/background.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/LevelsCreator/Buttons/NewGame.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/LevelsCreator/Buttons/OptionsButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/LevelsCreator/Buttons/MenuButton.tscn" type="PackedScene" id=8]
@@ -111,9 +110,6 @@ custom_fonts/font = SubResource( 1 )
 text = "Version 2.3
 Made in Godot 3.1.1
 "
-
-[node name="FadeIn" parent="." instance=ExtResource( 4 )]
-visible = false
 
 [node name="Exit" type="Button" parent="."]
 margin_left = 1064.0

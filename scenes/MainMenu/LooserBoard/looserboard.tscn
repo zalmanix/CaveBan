@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/back.png" type="Texture" id=1]
+[ext_resource path="res://assets/structure/back.png" type="Texture" id=1]
 [ext_resource path="res://assets/Misc/Font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scenes/MainMenu/LooserBoard/looserboard.gd" type="Script" id=3]
+
 
 [node name="looserboard" type="CanvasLayer"]
 script = ExtResource( 3 )

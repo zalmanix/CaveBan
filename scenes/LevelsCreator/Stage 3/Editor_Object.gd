@@ -1,5 +1,8 @@
 extends Node2D
 
+# A failure of a script
+# This script can place objects in
+
 var can_place = true
 onready var level = get_node("/root/main/Level")
 var tile_size = 16

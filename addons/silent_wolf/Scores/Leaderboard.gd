@@ -1,6 +1,11 @@
 tool
 extends Node2D
 
+#
+# This script is from addon (https://silentwolf.com/)
+# It is beautyfull but sadly not mine
+#
+
 const ScoreItem = preload("ScoreItem.tscn")
 const SWLogger = preload("../utils/SWLogger.gd")
 

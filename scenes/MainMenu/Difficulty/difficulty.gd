@@ -1,9 +1,11 @@
 extends Control
+# This script is 
 
 var rando = GameManager.rando
 var rng = RandomNumberGenerator.new()
 var number
 
+# Getting random number for later use 
 func _ready():
 	$Debug.text = str(GameManager.rando)
 	rng.randomize()
@@ -11,15 +13,14 @@ func _ready():
 	GameManager.single = false
 	#$VBoxContainer/MapMaker.text = ""
 
-
+# Toggle (Random pool button) on/off
 func _on_RandomPool_pressed():
 	if rando:
 		rando = false
 	else:
 		rando = true
-	
 
-#choosing difficulty
+#choosing difficulty and checking if player wants to play only random levels from its pool
 func _on_Normal_pressed():
 	GameManager.normal = true
 	GameManager.hard = false
@@ -34,7 +35,7 @@ func _on_Normal_pressed():
 		get_tree().change_scene("res://scenes/LevelsDone/normal/Level1/LevelBlank.tscn")
 		GameManager._ohman()
 
-
+#choosing difficulty and checking if player wants to play only random levels from its pool
 func _on_Hard_pressed():
 	GameManager.normal = false
 	GameManager.hard = true
@@ -49,8 +50,7 @@ func _on_Hard_pressed():
 		get_tree().change_scene("res://scenes/LevelsDone/hard/Level1/LevelHardBlank.tscn")
 		GameManager._ohman()
 
-
-
+#choosing difficulty and checking if player wants to play only random levels from its pool
 func _on_Easy_pressed():
 	#$Debug.text = str(GameManager.rando)
 	GameManager.normal = false
@@ -66,7 +66,8 @@ func _on_Easy_pressed():
 		get_tree().change_scene("res://scenes/LevelsDone/easy/Level1/LevelBlank.tscn")
 		GameManager._ohman()
 
-
+# Changing to first easy level and setting Global variable gradually to true so I can use it in
+# Levels scripts
 func _on_gradual_pressed():
 	GameManager.score = 0
 	GameManager.normal = false
@@ -77,10 +78,10 @@ func _on_gradual_pressed():
 	get_tree().change_scene("res://scenes/LevelsDone/easy/Level1/LevelBlank.tscn")
 	GameManager._ohman()
 
-
+# Button go back (changing scene to menu)
 func _on_Menu_pressed():
 	get_tree().change_scene("res://Main.tscn")
 
-
+# God forgive me for my sins
 func _on_MapMaker_pressed():
 	get_tree().change_scene("res://scenes/LevelsCreator/Stage 3/main.tscn")

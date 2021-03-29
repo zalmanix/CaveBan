@@ -1,6 +1,8 @@
 tool
 extends EditorPlugin
 
+# Addon loading and stuff
+
 func _enter_tree():
 	add_autoload_singleton("SilentWolf", "res://addons/silent_wolf/SilentWolf.gd")
 
