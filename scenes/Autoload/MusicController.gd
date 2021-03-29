@@ -3,7 +3,7 @@ extends Node
 # loading music from assets/audio folder
 var main_music = load("res://assets/audio/main.wav")
 var game_over_music = load("res://assets/audio/game_over.wav")
-var step_music = load("res://assets/audio/chodv2.wav")
+var step_music = load("res://assets/audio/chod.wav")
 var win_music = load("res://assets/audio/win.wav")
 
 # Main music playing
