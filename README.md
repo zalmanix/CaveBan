@@ -1,3 +1,4 @@
+
 # CaveBan
 
 Gra stworzona w ramach konkursu [Motorola Science Cup](https://science-cup.pl/). Napisana bazowo na platformę windows, ale jest również dostępna dla macOS oraz Linux. Do jej stworzenia użyty został silnk Godot 3.2.3
@@ -44,4 +45,6 @@ Możemy się poruszać między nimi wybierając odpowiednie skrypty z lewej stro
 --  **player** - zawierający scenę gracza a także jego skrypt
 
 ## Exportowanie
-Aby poprawnie wyexportować projekt należy wejść w zakładkę **Edytor** w górnej części ekranu. Następnie wybrać zakładkę **Ustawienia edytora**, w tej zakładce należy wybrać zakładkę **Windows** w zakładce **Export**
+Aby poprawnie wyexportować projekt należy wejść w zakładkę **Edytor** w górnej części ekranu. Następnie wybrać zakładkę **Ustawienia edytora**, w tej zakładce należy wybrać zakładkę **Windows** w zakładce **Export**. Następnie należy wybrać Rcedit z folderu Rcedit w głównym folderze projektu. Następnie należy wejść w zakładkę **Projekt** w górnej części edytora i wybrać opcje **Export**.
+W świeżo otwartym menu exportowania pojawi się czerwony komunikat że nie znaleziono szablonu exportowania. Trzeba go pobrać i można to zrobić klikając na **Zarządzaj szablonami exportu** a następnie na kliknąć **Pobierz** należy również wybrać server z listy i poczekać na zakończenie pobierania. Po zakończeniu pobierania należy ponownie otworzyć menu exportowania (tam gdzie był czerwony komunikat). Następnie należy wybrać 2 pozycję o nazwie **CaveBan** i wybrać przycisk  **Wyeksportuj projekt**. Kolejny krok upewnienie się że checkbox **Eksportuj z debugowaniem** w lewym dolnym rogu nie jest zaznaczony, wybrać miejsce i nazwę wyeksportowanej gry i potwierdzić przyciskiem zapisz. Czas eksportowania różni się między komputerami dlatego warto chwilkę poczekać a następnie sprawdzić czy CaveBan został wyeksportowany prawidłowo.
+- Warto zauważyć że przy pierwszym włączeniu gry jest ona wyciszona w opcjach dlatego należy wybrać dogodną głośność w opcjach i nacisnąć **Apply**. Szanujmy swoje uszy ^^
