@@ -13,6 +13,7 @@ Gra stworzona w ramach konkursu [Motorola Science Cup](https://science-cup.pl/).
 - Minimum 35 MB Pamięci Ram
 
 
+
 ### Sprawdzane na
 
 - Windows 10 Pro 20H2 (19042.804), Windows 10 Dev (21343.1000), Windows 10 Pro 1909 (18363.1440)
