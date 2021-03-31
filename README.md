@@ -33,17 +33,16 @@ W górnej części edytora projektu znajduje się panel który pozwala nam prze�
 
 Możemy się poruszać między nimi wybierając odpowiednie skrypty z lewej strony edytora. W edytorze można również poruszać się między scenami. Robi się to wybierając odpowiednie pliki z rozszerzeniem **.tscn** z systemu plików edytora w lewym dolnym rogu edytora
 
-
 ## Moduły  
 - Folder **Silnik** zawierający silnik gry Godot 
 - Folder **addons** zawiera addon [Silent Wolf](https://silentwolf.com) 
 - Folder **assets** zawiera materiały jak muzyka i dźwięki, czcionki oraz textury 
 -  Folder **scenes** to folder zawierający sceny, jest on podzielony na: 
---  **Autoload** - sceny i skrypty globalne potrzebne do poprawnego działania większości scen 
---  **LevelsCreator** - Komponenty takie jak przyciski używane np. w Menu czy obiekty nie wykorzystane ale przeznaczone do tworzenia poziomów w grze 
---  **LevelsDone** - Zawiera sceny z poziomami podzielonymi na poziomy trudności 
---  **MainMenu** - Zawiera on sceny takie jak wybór poziomu trudności, Leaderboard, opcje a także scenę pauzy zawierającą również skrypt zapisywania
---  **player** - zawierający scenę gracza a także jego skrypt
+	-  **Autoload** - sceny i skrypty globalne potrzebne do poprawnego działania większości scen 
+	-  **LevelsCreator** - Komponenty takie jak przyciski używane np. w Menu czy obiekty nie wykorzystane ale przeznaczone do tworzenia poziomów w grze 
+	-  **LevelsDone** - Zawiera sceny z poziomami podzielonymi na poziomy trudności 
+	-  **MainMenu** - Zawiera on sceny takie jak wybór poziomu trudności, Leaderboard, opcje a także scenę pauzy zawierającą również skrypt zapisywania
+	-  **player** - zawierający scenę gracza a także jego skrypt
 
 ## Exportowanie
 Aby poprawnie wyexportować projekt należy wejść w zakładkę **Edytor** w górnej części ekranu. Następnie wybrać zakładkę **Ustawienia edytora**, w tej zakładce należy wybrać zakładkę **Windows** w zakładce **Export**. Następnie należy wybrać Rcedit z folderu Rcedit w głównym folderze projektu. Następnie należy wejść w zakładkę **Projekt** w górnej części edytora i wybrać opcje **Export**.
