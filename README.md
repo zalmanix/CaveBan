@@ -42,3 +42,6 @@ Możemy się poruszać między nimi wybierając odpowiednie skrypty z lewej stro
 --  **LevelsDone** - Zawiera sceny z poziomami podzielonymi na poziomy trudności 
 --  **MainMenu** - Zawiera on sceny takie jak wybór poziomu trudności, Leaderboard, opcje a także scenę pauzy zawierającą również skrypt zapisywania
 --  **player** - zawierający scenę gracza a także jego skrypt
+
+## Exportowanie
+Aby poprawnie wyexportować projekt należy wejść w zakładkę **Edytor** w górnej części ekranu. Następnie wybrać zakładkę **Ustawienia edytora**, w tej zakładce należy wybrać zakładkę **Windows** w zakładce **Export**
